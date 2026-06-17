@@ -498,19 +498,36 @@ a {
   color: var(--pure-white);
 }
 
-/* Grid layout */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+/* Carousel layout */
+.portfolio-carousel-container {
+  position: relative;
   width: 100%;
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px auto 0 auto;
+}
+
+.portfolio-carousel-viewport {
+  width: 100%;
+  overflow: hidden;
+  padding: 12px 0;
+}
+
+.portfolio-carousel-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  width: max-content;
 }
 
 /* Portfolio Card Design (Category Card Style, Tesla Inspired) */
 .portfolio-card {
   position: relative;
-  height: 18vh;
-  aspect-ratio: 16 / 9;
+  width: 420px;
+  height: 48vh;
+  flex-shrink: 0;
   border-radius: 12px;
   overflow: hidden;
   background-color: var(--light-ash);
@@ -518,8 +535,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 16px;
-  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  padding: 24px;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s, width 0.5s, padding 0.5s, margin 0.5s;
 }
 
 .portfolio-card::after {
@@ -579,15 +596,74 @@ a {
 /* Portfolio Filtering Animation Class */
 .portfolio-card.hidden {
   opacity: 0;
-  transform: scale(0.8) translateY(20px);
-  pointer-events: none;
-  position: absolute;
   width: 0;
-  height: 0;
   padding: 0;
   margin: 0;
-  border: none;
+  pointer-events: none;
   overflow: hidden;
+  border: none;
+}
+
+/* Carousel Control Arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--frosted-glass);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  color: var(--carbon-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-universal), color var(--transition-universal), opacity var(--transition-universal);
+}
+
+.carousel-arrow:hover {
+  background-color: var(--carbon-dark);
+  color: var(--pure-white);
+}
+
+.carousel-arrow:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.carousel-arrow.prev {
+  left: -54px;
+}
+
+.carousel-arrow.next {
+  right: -54px;
+}
+
+/* Dots Indicators */
+.portfolio-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.portfolio-carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--silver-fog);
+  cursor: pointer;
+  transition: background-color var(--transition-universal);
+}
+
+.portfolio-carousel-dot.active {
+  background-color: var(--carbon-dark);
 }
 
 /* About Section Styles */
@@ -978,9 +1054,9 @@ textarea.form-control {
     padding: 0;
   }
 
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  .portfolio-carousel-container {
+    max-width: 100%;
+    margin-top: 16px;
   }
 
   .filter-tabs {
@@ -1019,9 +1095,12 @@ textarea.form-control {
   }
 
   .portfolio-card {
-    height: auto;
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    padding: 24px;
+    width: 80vw;
+    height: 40vh;
+    padding: 16px;
+  }
+
+  .carousel-arrow {
+    display: none;
   }
 }

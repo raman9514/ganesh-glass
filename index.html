@@ -135,64 +135,75 @@
           <button class="filter-tab" role="tab" aria-selected="false" data-filter="aluminum">Aluminum Systems</button>
         </div>
         
-        <!-- Grid Items -->
-        <div class="portfolio-grid">
+        <!-- Carousel Container -->
+        <div class="portfolio-carousel-container">
+          <button class="carousel-arrow prev" id="portfolio-prev" aria-label="Previous Project">&#8592;</button>
           
-          <!-- Card 1 -->
-          <article class="portfolio-card" data-category="aluminum">
-            <img src="assets/images/hero_bg.png" alt="Luxury Architectural Villa Facade" class="portfolio-card-img" loading="lazy">
-            <div class="portfolio-card-info">
-              <span class="portfolio-card-category">Glass & Aluminum</span>
-              <h3 class="portfolio-card-title">Architectural Villa Facade</h3>
-            </div>
-          </article>
-          
-          <!-- Card 2 -->
-          <article class="portfolio-card" data-category="glass">
-            <img src="assets/images/partition.png" alt="Minimalist Office Glass Partition" class="portfolio-card-img" loading="lazy">
-            <div class="portfolio-card-info">
-              <span class="portfolio-card-category">Glass Works</span>
-              <h3 class="portfolio-card-title">Frameless Grid Partition</h3>
-            </div>
-          </article>
-          
-          <!-- Card 3 -->
-          <article class="portfolio-card" data-category="aluminum">
-            <img src="assets/images/sliding_doors.png" alt="Premium Patio Sliding Glass Doors" class="portfolio-card-img" loading="lazy">
-            <div class="portfolio-card-info">
-              <span class="portfolio-card-category">Aluminum Systems</span>
-              <h3 class="portfolio-card-title">Slimline Patio Sliding Doors</h3>
-            </div>
-          </article>
-          
-          <!-- Card 4 -->
-          <article class="portfolio-card" data-category="glass">
-            <img src="assets/images/railing.png" alt="Ocean View Frameless Glass Balustrade" class="portfolio-card-img" loading="lazy">
-            <div class="portfolio-card-info">
-              <span class="portfolio-card-category">Glass Works</span>
-              <h3 class="portfolio-card-title">Frameless Balcony Railing</h3>
-            </div>
-          </article>
-          
-          <!-- Card 5 -->
-          <article class="portfolio-card" data-category="aluminum">
-            <img src="assets/images/curtain_wall.png" alt="High-Rise Curtain Wall & Structural Glazing" class="portfolio-card-img" loading="lazy">
-            <div class="portfolio-card-info">
-              <span class="portfolio-card-category">Aluminum & Glazing</span>
-              <h3 class="portfolio-card-title">Corporate Structural Glazing</h3>
-            </div>
-          </article>
-          
-          <!-- Card 6 -->
-          <article class="portfolio-card" data-category="glass">
-            <img src="assets/images/shower_enclosure.png" alt="Luxury Bathroom Glass Shower Cubicle" class="portfolio-card-img" loading="lazy">
-            <div class="portfolio-card-info">
-              <span class="portfolio-card-category">Glass Works</span>
-              <h3 class="portfolio-card-title">Premium Frameless Shower Cubicle</h3>
-            </div>
-          </article>
+          <div class="portfolio-carousel-viewport">
+            <div class="portfolio-carousel-track" id="portfolio-track">
+              
+              <!-- Card 1 -->
+              <article class="portfolio-card" data-category="aluminum">
+                <img src="assets/images/hero_bg.png" alt="Luxury Architectural Villa Facade" class="portfolio-card-img" loading="lazy">
+                <div class="portfolio-card-info">
+                  <span class="portfolio-card-category">Glass & Aluminum</span>
+                  <h3 class="portfolio-card-title">Architectural Villa Facade</h3>
+                </div>
+              </article>
+              
+              <!-- Card 2 -->
+              <article class="portfolio-card" data-category="glass">
+                <img src="assets/images/partition.png" alt="Minimalist Office Glass Partition" class="portfolio-card-img" loading="lazy">
+                <div class="portfolio-card-info">
+                  <span class="portfolio-card-category">Glass Works</span>
+                  <h3 class="portfolio-card-title">Frameless Grid Partition</h3>
+                </div>
+              </article>
+              
+              <!-- Card 3 -->
+              <article class="portfolio-card" data-category="aluminum">
+                <img src="assets/images/sliding_doors.png" alt="Premium Patio Sliding Glass Doors" class="portfolio-card-img" loading="lazy">
+                <div class="portfolio-card-info">
+                  <span class="portfolio-card-category">Aluminum Systems</span>
+                  <h3 class="portfolio-card-title">Slimline Patio Sliding Doors</h3>
+                </div>
+              </article>
+              
+              <!-- Card 4 -->
+              <article class="portfolio-card" data-category="glass">
+                <img src="assets/images/railing.png" alt="Ocean View Frameless Glass Balustrade" class="portfolio-card-img" loading="lazy">
+                <div class="portfolio-card-info">
+                  <span class="portfolio-card-category">Glass Works</span>
+                  <h3 class="portfolio-card-title">Frameless Balcony Railing</h3>
+                </div>
+              </article>
+              
+              <!-- Card 5 -->
+              <article class="portfolio-card" data-category="aluminum">
+                <img src="assets/images/curtain_wall.png" alt="High-Rise Curtain Wall & Structural Glazing" class="portfolio-card-img" loading="lazy">
+                <div class="portfolio-card-info">
+                  <span class="portfolio-card-category">Aluminum & Glazing</span>
+                  <h3 class="portfolio-card-title">Corporate Structural Glazing</h3>
+                </div>
+              </article>
+              
+              <!-- Card 6 -->
+              <article class="portfolio-card" data-category="glass">
+                <img src="assets/images/shower_enclosure.png" alt="Luxury Bathroom Glass Shower Cubicle" class="portfolio-card-img" loading="lazy">
+                <div class="portfolio-card-info">
+                  <span class="portfolio-card-category">Glass Works</span>
+                  <h3 class="portfolio-card-title">Premium Frameless Shower Cubicle</h3>
+                </div>
+              </article>
 
+            </div>
+          </div>
+          
+          <button class="carousel-arrow next" id="portfolio-next" aria-label="Next Project">&#8594;</button>
         </div>
+        
+        <!-- Carousel Dots -->
+        <div class="portfolio-carousel-dots" id="portfolio-dots"></div>
       </div>
     </section>
 

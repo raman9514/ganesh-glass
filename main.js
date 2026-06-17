@@ -115,9 +115,87 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // --- Portfolio Filtering System ---
+  // --- Portfolio Carousel & Filtering System ---
   const filterTabs = document.querySelectorAll('.filter-tab');
   const portfolioCards = document.querySelectorAll('.portfolio-card');
+  const track = document.getElementById('portfolio-track');
+  const prevBtn = document.getElementById('portfolio-prev');
+  const nextBtn = document.getElementById('portfolio-next');
+  const dotsContainer = document.getElementById('portfolio-dots');
+  
+  let visibleCards = [];
+  let currentIndex = 0;
+  const gap = 24; // Width of card gaps in CSS (24px)
+
+  const getVisibleCount = () => {
+    if (window.innerWidth <= 768) return 1;
+    const containerWidth = track.parentElement.offsetWidth;
+    const cardWidth = visibleCards[0] ? visibleCards[0].offsetWidth : 420;
+    return Math.floor(containerWidth / (cardWidth + gap)) || 1;
+  };
+
+  const slideCarousel = () => {
+    visibleCards = Array.from(portfolioCards).filter(card => !card.classList.contains('hidden'));
+    
+    if (window.innerWidth <= 768) {
+      // On mobile, let CSS horizontal layout scroll naturally
+      track.style.transform = 'none';
+      return;
+    }
+    
+    const cardWidth = visibleCards[0] ? visibleCards[0].offsetWidth : 420;
+    track.style.transform = `translateX(-${currentIndex * (cardWidth + gap)}px)`;
+    
+    // Update dots active state
+    const dots = dotsContainer.querySelectorAll('.portfolio-carousel-dot');
+    dots.forEach((dot, index) => {
+      if (index === currentIndex) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+    
+    // Update button states
+    const visibleCount = getVisibleCount();
+    const maxIndex = Math.max(0, visibleCards.length - visibleCount);
+    
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex >= maxIndex;
+    
+    // Hide buttons entirely if all cards fit on screen
+    if (visibleCards.length <= visibleCount) {
+      prevBtn.style.opacity = '0';
+      prevBtn.style.pointerEvents = 'none';
+      nextBtn.style.opacity = '0';
+      nextBtn.style.pointerEvents = 'none';
+    } else {
+      prevBtn.style.opacity = '';
+      prevBtn.style.pointerEvents = '';
+      nextBtn.style.opacity = '';
+      nextBtn.style.pointerEvents = '';
+    }
+  };
+
+  const generateDots = () => {
+    dotsContainer.innerHTML = '';
+    visibleCards = Array.from(portfolioCards).filter(card => !card.classList.contains('hidden'));
+    const visibleCount = getVisibleCount();
+    const dotsNum = Math.max(0, visibleCards.length - visibleCount + 1);
+    
+    if (dotsNum <= 1 || window.innerWidth <= 768) return; // No dots on mobile or if all fit
+    
+    for (let i = 0; i < dotsNum; i++) {
+      const dot = document.createElement('div');
+      dot.classList.add('portfolio-carousel-dot');
+      if (i === currentIndex) dot.classList.add('active');
+      dot.addEventListener('click', () => {
+        currentIndex = i;
+        slideCarousel();
+      });
+      dotsContainer.appendChild(dot);
+    }
+  };
 
   const filterProjects = (category) => {
     portfolioCards.forEach(card => {
@@ -129,6 +207,10 @@ document.addEventListener('DOMContentLoaded', () => {
         card.classList.add('hidden');
       }
     });
+    
+    currentIndex = 0;
+    generateDots();
+    slideCarousel();
   };
 
   filterTabs.forEach(tab => {
@@ -144,6 +226,32 @@ document.addEventListener('DOMContentLoaded', () => {
       const category = this.getAttribute('data-filter');
       filterProjects(category);
     });
+  });
+
+  // Carousel click listeners
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        slideCarousel();
+      }
+    });
+
+    nextBtn.addEventListener('click', () => {
+      const visibleCount = getVisibleCount();
+      const maxIndex = Math.max(0, visibleCards.length - visibleCount);
+      if (currentIndex < maxIndex) {
+        currentIndex++;
+        slideCarousel();
+      }
+    });
+  }
+
+  // Update carousel on viewport resize
+  window.addEventListener('resize', () => {
+    currentIndex = 0;
+    generateDots();
+    slideCarousel();
   });
 
   // Check URL parameters on load to auto-apply filter/inquiry details
@@ -168,6 +276,8 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   handleUrlParams();
+  generateDots();
+  slideCarousel();
 
   // Listen for hash/query changes dynamically
   window.addEventListener('popstate', handleUrlParams);
