@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Tags -->
+  <title>Ganesh Glass | Premium Glass & Aluminum Architectural Solutions</title>
+  <meta name="description" content="Ganesh Glass specializes in custom frameless glass partitions, premium aluminum sliding doors, structural glazing, glass railings, and luxury shower enclosures for residential and commercial spaces.">
+  <meta name="keywords" content="Ganesh Glass, glass work, aluminum work, frameless partition, sliding doors, curtain wall, shower cubicle, glass railing, Delhi glass fabricator">
+  <meta name="author" content="Ganesh Glass">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://maps.app.goo.gl/LvePJ6z3iPQ3ihMF8">
+  <meta property="og:title" content="Ganesh Glass | Premium Glass & Aluminum Works">
+  <meta property="og:description" content="Custom frameless glass partitions, premium aluminum sliding doors, structural glazing, glass railings, and luxury shower enclosures.">
+  <meta property="og:image" content="assets/images/hero_bg.png">
+
+  <!-- Favicon placeholder or styling -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💎</text></svg>">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="header-nav" id="main-header">
+    <a href="#hero" class="logo light-hero" id="logo-link">GANESH GLASS</a>
+    
+    <nav>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#hero" class="nav-item-link light-hero active">Home</a></li>
+        <li><a href="#services" class="nav-item-link light-hero">Services</a></li>
+        <li><a href="#portfolio" class="nav-item-link light-hero">Gallery</a></li>
+        <li><a href="#clients" class="nav-item-link light-hero">Clients</a></li>
+        <li><a href="#about" class="nav-item-link light-hero">About</a></li>
+        <li><a href="#contact" class="nav-item-link light-hero">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <a href="#contact" class="nav-cta light-hero" id="header-cta">Get Quote</a>
+    
+    <button class="hamburger" id="menu-toggle" aria-label="Toggle Navigation Menu">
+      <span class="light-hero"></span>
+      <span class="light-hero"></span>
+      <span class="light-hero"></span>
+    </button>
+  </header>
+
+  <!-- Mobile Navigation Drawer Overlay -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-drawer">
+    <ul class="mobile-nav-list">
+      <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+      <li><a href="#services" class="mobile-nav-link">Services</a></li>
+      <li><a href="#portfolio" class="mobile-nav-link">Gallery</a></li>
+      <li><a href="#clients" class="mobile-nav-link">Clients</a></li>
+      <li><a href="#about" class="mobile-nav-link">About</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <a href="#contact" class="mobile-nav-cta">Get Free Quote</a>
+  </aside>
+
+  <!-- Main Content Wrap with Snap Container -->
+  <main class="snap-container" id="snap-container">
+
+    <!-- Section 1: Hero Section (Tesla Inspired 100vh) -->
+    <section class="snap-section" id="hero">
+      <div class="section-bg">
+        <img src="assets/images/hero_bg.png" alt="High-end modern architectural glass villa" loading="eager">
+        <div class="bg-overlay"></div>
+      </div>
+      
+      <div class="section-content-top light-text">
+        <h1>Ganesh Glass</h1>
+        <p>Precision Glass. Engineered Aluminum.</p>
+      </div>
+      
+      <div class="section-content-bottom">
+        <a href="#contact" class="btn btn-primary">Get Quote</a>
+        <a href="#portfolio" class="btn btn-secondary">View Work</a>
+      </div>
+    </section>
+
+    <!-- Section 2: Glass Work Spotlight (Tesla Style Full-bleed) -->
+    <section class="snap-section" id="services">
+      <div class="section-bg">
+        <img src="assets/images/partition.png" alt="Luxury interior glass partition wall" loading="lazy">
+        <div class="bg-overlay"></div>
+      </div>
+      
+      <div class="section-content-top">
+        <h2>Glass Works</h2>
+        <p>Premium frameless partitions, shower enclosures, glass railings & bespoke glazing.</p>
+      </div>
+      
+      <div class="section-content-bottom">
+        <a href="#portfolio?filter=glass" class="btn btn-dark" id="btn-explore-glass">Explore Designs</a>
+        <a href="#contact?inquiry=glass" class="btn btn-secondary">Inquire Now</a>
+      </div>
+    </section>
+
+    <!-- Section 3: Aluminum Work Spotlight (Tesla Style Full-bleed) -->
+    <section class="snap-section" id="services-aluminum">
+      <div class="section-bg">
+        <img src="assets/images/sliding_doors.png" alt="Sleek aluminum sliding doors" loading="lazy">
+        <div class="bg-overlay"></div>
+      </div>
+      
+      <div class="section-content-top">
+        <h2>Aluminum Systems</h2>
+        <p>Slim-profile windows, heavy-duty sliding doors & structural curtain walls.</p>
+      </div>
+      
+      <div class="section-content-bottom">
+        <a href="#portfolio?filter=aluminum" class="btn btn-dark" id="btn-explore-aluminum">Explore Systems</a>
+        <a href="#contact?inquiry=aluminum" class="btn btn-secondary">Inquire Now</a>
+      </div>
+    </section>
+
+    <!-- Section 4: Interactive Gallery Section (Detailed Grid - Auto Height) -->
+    <section class="auto-section" id="portfolio">
+      <div class="gallery-section reveal">
+        <div class="gallery-header">
+          <h2>Our Gallery</h2>
+          <p>Explore some of our recent installations across residential & commercial properties</p>
+        </div>
+        
+        <!-- Filter Tabs -->
+        <div class="filter-tabs" role="tablist">
+          <button class="filter-tab active" role="tab" aria-selected="true" data-filter="all">All Projects</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="glass">Glass Works</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="aluminum">Aluminum Systems</button>
+        </div>
+        
+        <!-- Grid Items -->
+        <div class="portfolio-grid">
+          
+          <!-- Card 1 -->
+          <article class="portfolio-card" data-category="aluminum">
+            <img src="assets/images/hero_bg.png" alt="Luxury Architectural Villa Facade" class="portfolio-card-img" loading="lazy">
+            <div class="portfolio-card-info">
+              <span class="portfolio-card-category">Glass & Aluminum</span>
+              <h3 class="portfolio-card-title">Architectural Villa Facade</h3>
+            </div>
+          </article>
+          
+          <!-- Card 2 -->
+          <article class="portfolio-card" data-category="glass">
+            <img src="assets/images/partition.png" alt="Minimalist Office Glass Partition" class="portfolio-card-img" loading="lazy">
+            <div class="portfolio-card-info">
+              <span class="portfolio-card-category">Glass Works</span>
+              <h3 class="portfolio-card-title">Frameless Grid Partition</h3>
+            </div>
+          </article>
+          
+          <!-- Card 3 -->
+          <article class="portfolio-card" data-category="aluminum">
+            <img src="assets/images/sliding_doors.png" alt="Premium Patio Sliding Glass Doors" class="portfolio-card-img" loading="lazy">
+            <div class="portfolio-card-info">
+              <span class="portfolio-card-category">Aluminum Systems</span>
+              <h3 class="portfolio-card-title">Slimline Patio Sliding Doors</h3>
+            </div>
+          </article>
+          
+          <!-- Card 4 -->
+          <article class="portfolio-card" data-category="glass">
+            <img src="assets/images/railing.png" alt="Ocean View Frameless Glass Balustrade" class="portfolio-card-img" loading="lazy">
+            <div class="portfolio-card-info">
+              <span class="portfolio-card-category">Glass Works</span>
+              <h3 class="portfolio-card-title">Frameless Balcony Railing</h3>
+            </div>
+          </article>
+          
+          <!-- Card 5 -->
+          <article class="portfolio-card" data-category="aluminum">
+            <img src="assets/images/curtain_wall.png" alt="High-Rise Curtain Wall & Structural Glazing" class="portfolio-card-img" loading="lazy">
+            <div class="portfolio-card-info">
+              <span class="portfolio-card-category">Aluminum & Glazing</span>
+              <h3 class="portfolio-card-title">Corporate Structural Glazing</h3>
+            </div>
+          </article>
+          
+          <!-- Card 6 -->
+          <article class="portfolio-card" data-category="glass">
+            <img src="assets/images/shower_enclosure.png" alt="Luxury Bathroom Glass Shower Cubicle" class="portfolio-card-img" loading="lazy">
+            <div class="portfolio-card-info">
+              <span class="portfolio-card-category">Glass Works</span>
+              <h3 class="portfolio-card-title">Premium Frameless Shower Cubicle</h3>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: About Section -->
+    <section class="auto-section" id="about" style="background-color: var(--light-ash);">
+      <div class="gallery-section reveal">
+        <div class="gallery-header">
+          <h2>Engineering Elegance</h2>
+          <p>Ganesh Glass combines premium materials with skilled engineering to bring your architectural visions to life.</p>
+        </div>
+        
+        <div class="about-grid">
+          <div class="about-text">
+            <h3>Crafted to Perfection</h3>
+            <p>
+              For over a decade, we have been Delhi/NCR's trusted partner for modern architectural glass and high-grade aluminum fabrication. We work closely with architects, developers, and homeowners to deliver custom installations that elevate form and maintain robust function.
+            </p>
+            <p>
+              Whether it is the thermal efficiency of our premium aluminum profiles or the safety standards of our tempered structural glazing, we build with precision, care, and a devotion to modern luxury.
+            </p>
+          </div>
+          
+          <div class="about-features">
+            <div class="feature-item">
+              <h4>Premium Quality</h4>
+              <p>We source only high-grade tempered glass and powder-coated anodized aluminum profiles.</p>
+            </div>
+            <div class="feature-item">
+              <h4>Custom Engineering</h4>
+              <p>Every partition, door, and facade is custom-tailored to fit your space perfectly.</p>
+            </div>
+            <div class="feature-item">
+              <h4>Expert Installation</h4>
+              <p>Our skilled fabricators ensure structurally sound, secure, and level fitting on site.</p>
+            </div>
+            <div class="feature-item">
+              <h4>Aesthetic Precision</h4>
+              <p>Minimal profiles, maximum glass view, zero visible compromises.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Clients Section (Sleek showcase of prestigious projects) -->
+    <section class="auto-section" id="clients" style="background-color: var(--pure-white);">
+      <div class="gallery-section reveal">
+        <div class="gallery-header">
+          <h2>Our Trusted Clients</h2>
+          <p>We are proud to have delivered precision glass and aluminum solutions for prestigious clients.</p>
+        </div>
+        
+        <div class="clients-grid">
+          <div class="client-logo-card">
+            <span class="client-logo-icon" aria-hidden="true">✈️</span>
+            <h3>Air India</h3>
+            <p>Corporate Facilities</p>
+          </div>
+          <div class="client-logo-card">
+            <span class="client-logo-icon" aria-hidden="true">💇‍♂️</span>
+            <h3>Rawals Salon</h3>
+            <p>Premium Storefronts</p>
+          </div>
+          <div class="client-logo-card">
+            <span class="client-logo-icon" aria-hidden="true">🏢</span>
+            <h3>Apex Corporate Park</h3>
+            <p>Structural Curtain Walls</p>
+          </div>
+          <div class="client-logo-card">
+            <span class="client-logo-icon" aria-hidden="true">🛍️</span>
+            <h3>Galleria Mall</h3>
+            <p>Frameless Glass Facades</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Contact & Location (Detailed Section - Auto Height) -->
+    <section class="auto-section" id="contact">
+      <div class="gallery-section reveal">
+        <div class="gallery-header">
+          <h2>Connect With Us</h2>
+          <p>Get a custom quotation for your project or visit our workshop</p>
+        </div>
+        
+        <div class="contact-container">
+          
+          <!-- Contact details & Map -->
+          <div class="contact-details">
+            <ul class="contact-info-list">
+              <li class="contact-info-item">
+                <span class="contact-info-icon" aria-hidden="true">📍</span>
+                <div class="contact-info-text">
+                  <h4>Our Location</h4>
+                  <p>Ganesh Glass, Jasola Vihar / Okhla, New Delhi, Delhi 110025, India</p>
+                  <a href="https://maps.app.goo.gl/LvePJ6z3iPQ3ihMF8" target="_blank" rel="noopener noreferrer" style="margin-top: 6px; display: inline-block; font-weight: 500;">Open in Google Maps &rarr;</a>
+                </div>
+              </li>
+              <li class="contact-info-item">
+                <span class="contact-info-icon" aria-hidden="true">📞</span>
+                <div class="contact-info-text">
+                  <h4>Call / WhatsApp</h4>
+                  <p><a href="tel:+919999999999">+91 99999 99999</a> (Project Hotline)</p>
+                </div>
+              </li>
+              <li class="contact-info-item">
+                <span class="contact-info-icon" aria-hidden="true">✉️</span>
+                <div class="contact-info-text">
+                  <h4>Email Inquiries</h4>
+                  <p><a href="mailto:info@ganeshglass.com">info@ganeshglass.com</a></p>
+                </div>
+              </li>
+              <li class="contact-info-item">
+                <span class="contact-info-icon" aria-hidden="true">⏰</span>
+                <div class="contact-info-text">
+                  <h4>Business Hours</h4>
+                  <p>Monday – Saturday: 10:00 AM – 7:30 PM<br>Sunday: Closed</p>
+                </div>
+              </li>
+            </ul>
+            
+            <!-- Map Embed iframe -->
+            <div class="map-embed">
+              <!-- Real Google Map pointing to Ganesh Glass location coords derived from the maps URL -->
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.6062777174697!2d77.27366287612711!3d28.52303347572714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1d5bdc34b63%3A0x48f3f3906d32a8c0!2sGanesh%20Glass!5e0!3m2!1sen!2sin!4v1718645000000!5m2!1sen!2sin" 
+                title="Ganesh Glass Location Map"
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+          
+          <!-- Contact Form -->
+          <form class="contact-form" id="project-contact-form">
+            <h3 style="margin-bottom: 8px;">Request a Quote</h3>
+            <p style="margin-bottom: 20px; font-size: 0.81rem;">Leave your details below. Our technical estimator will contact you within 24 hours.</p>
+            
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Full Name</label>
+              <input type="text" id="contact-name" class="form-control" required placeholder="John Doe">
+            </div>
+            
+            <div class="form-group">
+              <label for="contact-phone" class="form-label">Phone Number</label>
+              <input type="tel" id="contact-phone" class="form-control" required placeholder="+91 XXXXX XXXXX">
+            </div>
+            
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Email Address (Optional)</label>
+              <input type="email" id="contact-email" class="form-control" placeholder="john@example.com">
+            </div>
+            
+            <div class="form-group">
+              <label for="contact-work" class="form-label">Type of Work</label>
+              <select id="contact-work" class="form-control">
+                <option value="general">Select service requirement...</option>
+                <option value="glass">Glass Partitions / Showers / Railings</option>
+                <option value="aluminum">Aluminum Windows & Sliding Doors</option>
+                <option value="curtain-wall">Commercial Facade / Curtain Wall</option>
+                <option value="other">Bespoke / Multiple Works</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Project Details</label>
+              <textarea id="contact-message" class="form-control" required placeholder="Briefly describe the dimensions or requirements of your project..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="margin-top: 8px;">Submit Quote Request</button>
+            
+            <div id="form-feedback" style="display: none; font-size: 0.88rem; text-align: center; margin-top: 12px; color: var(--electric-blue); font-weight: 500;"></div>
+          </form>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="#hero" class="footer-link">Home</a>
+        <a href="#services" class="footer-link">Services</a>
+        <a href="#portfolio" class="footer-link">Gallery</a>
+        <a href="#clients" class="footer-link">Clients</a>
+        <a href="#about" class="footer-link">About Us</a>
+        <a href="https://maps.app.goo.gl/LvePJ6z3iPQ3ihMF8" target="_blank" rel="noopener noreferrer" class="footer-link">Find Us on Google Maps</a>
+      </div>
+      <p>&copy; 2026 Ganesh Glass. All Rights Reserved. Designed with precision.</p>
+    </footer>
+
+  </main>
+
+  <!-- Mobile Sticky Contact Bar (Collapses and provides instant tap-to-call) -->
+  <div class="mobile-sticky-bar" id="mobile-call-bar">
+    <div class="mobile-sticky-bar-text">
+      <h4>Ganesh Glass Works</h4>
+      <p>Custom glass & aluminum solutions</p>
+    </div>
+    <a href="tel:+919999999999" class="mobile-sticky-bar-btn" aria-label="Call Ganesh Glass now">
+      <span>📞 Call Now</span>
+    </a>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>
