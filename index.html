@@ -291,41 +291,45 @@
           <p>Leave your details below. Our technical estimator will contact you within 24 hours.</p>
         </div>
         
-        <div class="form-container-centered" style="width: 100%; max-width: 550px; margin: 0 auto;">
+        <div class="form-container-centered" style="width: 100%; max-width: 650px; margin: 0 auto;">
           <!-- Contact Form -->
           <form class="contact-form" id="project-contact-form">
-            <div class="form-group">
-              <label for="contact-name" class="form-label">Full Name</label>
-              <input type="text" id="contact-name" class="form-control" required placeholder="John Doe">
+            <div class="contact-form-row">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Full Name</label>
+                <input type="text" id="contact-name" class="form-control" required placeholder="John Doe">
+              </div>
+              
+              <div class="form-group">
+                <label for="contact-phone" class="form-label">Phone Number</label>
+                <input type="tel" id="contact-phone" class="form-control" required placeholder="+91 XXXXX XXXXX">
+              </div>
             </div>
             
-            <div class="form-group">
-              <label for="contact-phone" class="form-label">Phone Number</label>
-              <input type="tel" id="contact-phone" class="form-control" required placeholder="+91 XXXXX XXXXX">
+            <div class="contact-form-row" style="margin-top: 12px;">
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address (Optional)</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="john@example.com">
+              </div>
+              
+              <div class="form-group">
+                <label for="contact-work" class="form-label">Type of Work</label>
+                <select id="contact-work" class="form-control">
+                  <option value="general">Select service requirement...</option>
+                  <option value="glass">Glass Partitions / Showers / Railings</option>
+                  <option value="aluminum">Aluminum Windows & Sliding Doors</option>
+                  <option value="curtain-wall">Commercial Facade / Curtain Wall</option>
+                  <option value="other">Bespoke / Multiple Works</option>
+                </select>
+              </div>
             </div>
             
-            <div class="form-group">
-              <label for="contact-email" class="form-label">Email Address (Optional)</label>
-              <input type="email" id="contact-email" class="form-control" placeholder="john@example.com">
-            </div>
-            
-            <div class="form-group">
-              <label for="contact-work" class="form-label">Type of Work</label>
-              <select id="contact-work" class="form-control">
-                <option value="general">Select service requirement...</option>
-                <option value="glass">Glass Partitions / Showers / Railings</option>
-                <option value="aluminum">Aluminum Windows & Sliding Doors</option>
-                <option value="curtain-wall">Commercial Facade / Curtain Wall</option>
-                <option value="other">Bespoke / Multiple Works</option>
-              </select>
-            </div>
-            
-            <div class="form-group">
+            <div class="form-group" style="margin-top: 12px;">
               <label for="contact-message" class="form-label">Project Details</label>
               <textarea id="contact-message" class="form-control" required placeholder="Briefly describe dimensions or requirements..."></textarea>
             </div>
             
-            <button type="submit" class="btn btn-primary" style="margin-top: 8px;">Submit Quote Request</button>
+            <button type="submit" class="btn btn-primary" style="margin-top: 12px;">Submit Quote Request</button>
             
             <div id="form-feedback" style="display: none; font-size: 0.88rem; text-align: center; margin-top: 12px; color: var(--electric-blue); font-weight: 500;"></div>
           </form>

@@ -805,6 +805,13 @@ a {
   border-radius: 12px;
 }
 
+.contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+}
+
 .form-group {
   display: flex;
   flex-direction: column;
@@ -1087,6 +1094,11 @@ textarea.form-control {
   
   .contact-form {
     padding: 20px;
+  }
+
+  .contact-form-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   html, body {
