@@ -36,11 +36,12 @@
         <li><a href="#portfolio" class="nav-item-link light-hero">Gallery</a></li>
         <li><a href="#clients" class="nav-item-link light-hero">Clients</a></li>
         <li><a href="#about" class="nav-item-link light-hero">About</a></li>
-        <li><a href="#contact" class="nav-item-link light-hero">Contact</a></li>
+        <li><a href="#inquire" class="nav-item-link light-hero">Quote</a></li>
+        <li><a href="#contact" class="nav-item-link light-hero">Visit Us</a></li>
       </ul>
     </nav>
     
-    <a href="#contact" class="nav-cta light-hero" id="header-cta">Get Quote</a>
+    <a href="#inquire" class="nav-cta light-hero" id="header-cta">Get Quote</a>
     
     <button class="hamburger" id="menu-toggle" aria-label="Toggle Navigation Menu">
       <span class="light-hero"></span>
@@ -58,9 +59,10 @@
       <li><a href="#portfolio" class="mobile-nav-link">Gallery</a></li>
       <li><a href="#clients" class="mobile-nav-link">Clients</a></li>
       <li><a href="#about" class="mobile-nav-link">About</a></li>
-      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      <li><a href="#inquire" class="mobile-nav-link">Get Quote</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Visit Us</a></li>
     </ul>
-    <a href="#contact" class="mobile-nav-cta">Get Free Quote</a>
+    <a href="#inquire" class="mobile-nav-cta">Get Free Quote</a>
   </aside>
 
   <!-- Main Content Wrap with Snap Container -->
@@ -281,68 +283,17 @@
       </div>
     </section>
 
-    <!-- Section 6: Contact & Location (Detailed Section - Auto Height) -->
-    <section class="snap-section" id="contact">
+    <!-- Section 6: Request a Quote (Detailed Form) -->
+    <section class="snap-section centered" id="inquire">
       <div class="gallery-section reveal">
         <div class="gallery-header">
-          <h2>Connect With Us</h2>
-          <p>Get a custom quotation for your project or visit our workshop</p>
+          <h2>Request a Quote</h2>
+          <p>Leave your details below. Our technical estimator will contact you within 24 hours.</p>
         </div>
         
-        <div class="contact-container">
-          
-          <!-- Contact details & Map -->
-          <div class="contact-details">
-            <ul class="contact-info-list">
-              <li class="contact-info-item">
-                <span class="contact-info-icon" aria-hidden="true">📍</span>
-                <div class="contact-info-text">
-                  <h4>Our Location</h4>
-                  <p>Ganesh Glass, Jasola Vihar / Okhla, New Delhi, Delhi 110025, India</p>
-                  <a href="https://maps.app.goo.gl/LvePJ6z3iPQ3ihMF8" target="_blank" rel="noopener noreferrer" style="margin-top: 6px; display: inline-block; font-weight: 500;">Open in Google Maps &rarr;</a>
-                </div>
-              </li>
-              <li class="contact-info-item">
-                <span class="contact-info-icon" aria-hidden="true">📞</span>
-                <div class="contact-info-text">
-                  <h4>Call / WhatsApp</h4>
-                  <p><a href="tel:+919999999999">+91 99999 99999</a> (Project Hotline)</p>
-                </div>
-              </li>
-              <li class="contact-info-item">
-                <span class="contact-info-icon" aria-hidden="true">✉️</span>
-                <div class="contact-info-text">
-                  <h4>Email Inquiries</h4>
-                  <p><a href="mailto:info@ganeshglass.com">info@ganeshglass.com</a></p>
-                </div>
-              </li>
-              <li class="contact-info-item">
-                <span class="contact-info-icon" aria-hidden="true">⏰</span>
-                <div class="contact-info-text">
-                  <h4>Business Hours</h4>
-                  <p>Monday – Saturday: 10:00 AM – 7:30 PM<br>Sunday: Closed</p>
-                </div>
-              </li>
-            </ul>
-            
-            <!-- Map Embed iframe -->
-            <div class="map-embed">
-              <!-- Real Google Map pointing to Ganesh Glass location coords derived from the maps URL -->
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.6062777174697!2d77.27366287612711!3d28.52303347572714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1d5bdc34b63%3A0x48f3f3906d32a8c0!2sGanesh%20Glass!5e0!3m2!1sen!2sin!4v1718645000000!5m2!1sen!2sin" 
-                title="Ganesh Glass Location Map"
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
-            </div>
-          </div>
-          
+        <div class="form-container-centered" style="width: 100%; max-width: 550px; margin: 0 auto;">
           <!-- Contact Form -->
           <form class="contact-form" id="project-contact-form">
-            <h3 style="margin-bottom: 8px;">Request a Quote</h3>
-            <p style="margin-bottom: 20px; font-size: 0.81rem;">Leave your details below. Our technical estimator will contact you within 24 hours.</p>
-            
             <div class="form-group">
               <label for="contact-name" class="form-label">Full Name</label>
               <input type="text" id="contact-name" class="form-control" required placeholder="John Doe">
@@ -371,30 +322,87 @@
             
             <div class="form-group">
               <label for="contact-message" class="form-label">Project Details</label>
-              <textarea id="contact-message" class="form-control" required placeholder="Briefly describe the dimensions or requirements of your project..."></textarea>
+              <textarea id="contact-message" class="form-control" required placeholder="Briefly describe dimensions or requirements..."></textarea>
             </div>
             
             <button type="submit" class="btn btn-primary" style="margin-top: 8px;">Submit Quote Request</button>
             
             <div id="form-feedback" style="display: none; font-size: 0.88rem; text-align: center; margin-top: 12px; color: var(--electric-blue); font-weight: 500;"></div>
           </form>
-          
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div class="footer-links">
-        <a href="#hero" class="footer-link">Home</a>
-        <a href="#services" class="footer-link">Services</a>
-        <a href="#portfolio" class="footer-link">Gallery</a>
-        <a href="#clients" class="footer-link">Clients</a>
-        <a href="#about" class="footer-link">About Us</a>
-        <a href="https://maps.app.goo.gl/LvePJ6z3iPQ3ihMF8" target="_blank" rel="noopener noreferrer" class="footer-link">Find Us on Google Maps</a>
+    <!-- Section 7: Visit Us & Location (Map & Address) -->
+    <section class="snap-section" id="contact">
+      <div class="gallery-section reveal" style="margin-top: auto; margin-bottom: auto; width: 100%;">
+        <div class="gallery-header" style="margin-bottom: 24px;">
+          <h2>Visit Our Showroom</h2>
+          <p>Drop by our workshop or reach out directly via phone and email</p>
+        </div>
+        
+        <div class="contact-container">
+          <!-- Contact details -->
+          <div class="contact-details">
+            <ul class="contact-info-list">
+              <li class="contact-info-item">
+                <span class="contact-info-icon" aria-hidden="true">📍</span>
+                <div class="contact-info-text">
+                  <h4>Our Location</h4>
+                  <p>Ganesh Glass, Jasola Vihar / Okhla, New Delhi, Delhi 110025</p>
+                  <a href="https://maps.app.goo.gl/LvePJ6z3iPQ3ihMF8" target="_blank" rel="noopener noreferrer" style="margin-top: 4px; display: inline-block; font-weight: 500;">Open in Google Maps &rarr;</a>
+                </div>
+              </li>
+              <li class="contact-info-item">
+                <span class="contact-info-icon" aria-hidden="true">📞</span>
+                <div class="contact-info-text">
+                  <h4>Call / WhatsApp</h4>
+                  <p><a href="tel:+919999999999">+91 99999 99999</a> (Project Hotline)</p>
+                </div>
+              </li>
+              <li class="contact-info-item">
+                <span class="contact-info-icon" aria-hidden="true">✉️</span>
+                <div class="contact-info-text">
+                  <h4>Email Inquiries</h4>
+                  <p><a href="mailto:info@ganeshglass.com">info@ganeshglass.com</a></p>
+                </div>
+              </li>
+              <li class="contact-info-item">
+                <span class="contact-info-icon" aria-hidden="true">⏰</span>
+                <div class="contact-info-text">
+                  <h4>Business Hours</h4>
+                  <p>Mon – Sat: 10:00 AM – 7:30 PM (Sun: Closed)</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Map Embed iframe -->
+          <div class="map-embed">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.6062777174697!2d77.27366287612711!3d28.52303347572714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1d5bdc34b63%3A0x48f3f3906d32a8c0!2sGanesh%20Glass!5e0!3m2!1sen!2sin!4v1718645000000!5m2!1sen!2sin" 
+              title="Ganesh Glass Location Map"
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
       </div>
-      <p>&copy; 2026 Ganesh Glass. All Rights Reserved. Designed with precision.</p>
-    </footer>
+
+      <!-- Footer -->
+      <footer class="site-footer" style="width: 100%; margin-top: auto;">
+        <div class="footer-links">
+          <a href="#hero" class="footer-link">Home</a>
+          <a href="#services" class="footer-link">Services</a>
+          <a href="#portfolio" class="footer-link">Gallery</a>
+          <a href="#clients" class="footer-link">Clients</a>
+          <a href="#about" class="footer-link">About Us</a>
+          <a href="#inquire" class="footer-link">Get Quote</a>
+        </div>
+        <p>&copy; 2026 Ganesh Glass. All Rights Reserved. Designed with precision.</p>
+      </footer>
+    </section>
 
   </main>
 
