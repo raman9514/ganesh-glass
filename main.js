@@ -211,6 +211,12 @@ document.addEventListener('DOMContentLoaded', () => {
     currentIndex = 0;
     generateDots();
     slideCarousel();
+    
+    // Reset scroll position of the viewport on mobile/tablet native scroll
+    const viewport = track.parentElement;
+    if (viewport) {
+      viewport.scrollTo({ left: 0, behavior: 'smooth' });
+    }
   };
 
   filterTabs.forEach(tab => {
@@ -252,6 +258,12 @@ document.addEventListener('DOMContentLoaded', () => {
     currentIndex = 0;
     generateDots();
     slideCarousel();
+    
+    // Reset scroll position of the viewport on mobile/tablet native scroll
+    const viewport = track.parentElement;
+    if (viewport) {
+      viewport.scrollLeft = 0;
+    }
   });
 
   // Check URL parameters on load to auto-apply filter/inquiry details

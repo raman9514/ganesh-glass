@@ -450,8 +450,8 @@ a {
 }
 
 /* Portfolio Gallery Styles */
-.gallery-section {
-  background-color: var(--pure-white);
+.gallery-section,
+.about-section {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -1044,7 +1044,9 @@ textarea.form-control {
   .snap-section {
     scroll-snap-align: none;
     scroll-snap-stop: none;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
     padding-top: 80px;
     padding-bottom: 40px;
   }
@@ -1062,6 +1064,7 @@ textarea.form-control {
   }
 
   .portfolio-carousel-container {
+    display: block;
     max-width: 100%;
     margin-top: 16px;
   }
@@ -1106,10 +1109,28 @@ textarea.form-control {
     overflow: visible;
   }
 
+  .portfolio-carousel-viewport {
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 12px 0;
+  }
+
+  .portfolio-carousel-viewport::-webkit-scrollbar {
+    display: none;
+  }
+
+  .portfolio-carousel-track {
+    padding: 0 24px;
+  }
+
   .portfolio-card {
     width: 80vw;
     height: 40vh;
     padding: 16px;
+    scroll-snap-align: center;
   }
 
   .carousel-arrow {
